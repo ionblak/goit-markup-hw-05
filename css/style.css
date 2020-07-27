@@ -54,6 +54,15 @@ img {
 .site-nav a.focus {
   color: var(--accent-color);
 }
+/* подчеркивание в навигации */
+.site-nav .focus::after {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 4px;
+  background-color: var(--accent-color);
+  margin-top: 28px;
+}
 /* точки списка */
 .list {
   list-style: none;
@@ -105,19 +114,6 @@ img {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-}
-/* подчеркивание ховером в навигации */
-.site-nav .link::after {
-  display: block;
-  content: "";
-  width: 0;
-  height: 4px;
-  background-color: var(--accent-color);
-  margin-top: 28px;
-}
-.site-nav .link:hover::after,
-.site-nav .link:focus::after {
-  width: 100%;
 }
 .mail {
   display: flex;
@@ -272,7 +268,14 @@ img {
 .works .advantages.item:nth-child(3n) {
   margin-right: 0;
 }
+.works-box {
+  position: relative;
+}
 .works .title {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
   background: rgba(47, 48, 58, 0.8);
   padding-top: 27px;
   padding-bottom: 27px;
@@ -553,13 +556,31 @@ img {
   letter-spacing: 0.06em;
   color: var(--title-text-color);
 }
+.projects-box {
+  position: relative;
+  width: 370px;
+}
 .projects .text {
-  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-top: 63px;
+  padding-right: 24px;
+  padding-bottom: 63px;
+  padding-left: 24px;
+  height: 100%;
+  width: 100%;
   margin: 0;
   font-size: 18px;
   line-height: 1.56;
   letter-spacing: 0.03em;
   color: var(--bg-color);
+  background-color: rgba(33, 150, 243, 0.9);
+  opacity: 0;
+}
+.projects .text:hover,
+.projects .text:focus {
+  opacity: 1;
 }
 .projects .imet {
   padding-left: 24px;
