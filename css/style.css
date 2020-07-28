@@ -7,6 +7,7 @@ html {
   box-sizing: inherit;
 }
 :root {
+  --transition: cubic-bezier(0.4, 0, 0.2, 1);
   --primary-text-color: #757575;
   --title-text-color: #212121;
   --accent-color: #2196f3;
@@ -60,6 +61,7 @@ img {
   content: "";
   width: 100%;
   height: 4px;
+  border-radius: 2px;
   background-color: var(--accent-color);
   margin-top: 28px;
 }
@@ -509,6 +511,9 @@ img {
   letter-spacing: 0.03em;
   color: var(--title-text-color);
   cursor: pointer;
+
+  transition: color 250ms var(--transition),
+    background-color 250px var(--transition);
 }
 .radio-button:hover,
 .radio-button:focus {
@@ -557,11 +562,13 @@ img {
 .projects-box {
   position: relative;
   width: 370px;
+  overflow: hidden;
 }
 .projects .text {
   position: absolute;
   top: 0;
   right: 0;
+
   padding-top: 63px;
   padding-right: 24px;
   padding-bottom: 63px;
@@ -572,13 +579,16 @@ img {
   font-size: 18px;
   line-height: 1.56;
   letter-spacing: 0.03em;
+
   color: var(--bg-color);
   background-color: rgba(33, 150, 243, 0.9);
-  opacity: 0;
+
+  transform: translateY(100%);
+  transition: transform 250ms var(--transition);
 }
 .projects .item:hover .text,
 .projects .item:focus .text {
-  opacity: 1;
+  transform: translateY(0);
 }
 .projects .imet {
   padding-left: 24px;
