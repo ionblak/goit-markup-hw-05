@@ -75,6 +75,7 @@ img {
 .link {
   text-decoration: none;
   display: block;
+  transition: color 250ms var(--transition);
 }
 .page .link:hover,
 .page .link:focus {
@@ -133,6 +134,8 @@ img {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+
+  transition: color 250ms var(--transition);
 }
 .mail .link:hover svg,
 .mail .link:focus svg {
@@ -144,12 +147,16 @@ img {
   height: 11px;
   margin-right: 10px;
   fill: var(--primary-text-color);
+
+  transition: fill 250ms var(--transition);
 }
 .smartphone-svg {
   width: 10px;
   height: 15px;
   margin-right: 10px;
   fill: var(--primary-text-color);
+
+  transition: fill 250ms var(--transition);
 }
 /* тело страницы */
 /*герой страницы*/
@@ -196,6 +203,13 @@ img {
   letter-spacing: 0.06em;
   color: var(--bg-color);
   cursor: pointer;
+
+  transition: background-color 250ms var(--transition);
+}
+.hero-button:hover {
+  background: #188ce8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
 }
 /* Заголовки секций */
 .section-title {
@@ -342,15 +356,18 @@ img {
   justify-content: center;
   align-items: center;
   background-color: var(--bg-color);
+
+  transition: background-color 250ms var(--transition);
 }
 .social-networks__link-svg {
   border-radius: 50px;
   fill: #afb1b8;
+
+  transition: fill 250ms var(--transition);
 }
 .social-networks__link:hover,
 .social-networks__link:focus {
   background-color: var(--accent-color);
-  fill: var(--bg-color);
 }
 .social-networks__link:hover .social-networks__link-svg {
   fill: var(--bg-color);
@@ -387,9 +404,12 @@ img {
   border: 1px solid #afb1b8;
   box-sizing: border-box;
   border-radius: 4px;
+  transition: border 250ms var(--transition);
 }
 .icon-logo {
   fill: #afb1b8;
+
+  transition: fill 250ms var(--transition);
 }
 .customers .link:hover,
 .customers .link:focus {
@@ -467,6 +487,8 @@ img {
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
   fill: var(--bg-color);
+
+  transition: background-color 250ms var(--transition);
 }
 .blok-action__social-networks .link:hover,
 .blok-action__social-networks .link:focus {
@@ -513,7 +535,7 @@ img {
   cursor: pointer;
 
   transition: color 250ms var(--transition),
-    background-color 250px var(--transition);
+    background-color 250ms var(--transition), box-shadow 250ms var(--transition);
 }
 .radio-button:hover,
 .radio-button:focus {
@@ -532,6 +554,8 @@ img {
   margin-right: 30px;
   margin-bottom: 30px;
   overflow: hidden;
+
+  transition: box-shadow 250ms var(--transition);
 }
 .projects .item:hover,
 .projects .item:focus {
