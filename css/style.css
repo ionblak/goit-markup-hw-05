@@ -550,7 +550,6 @@ contaks--mail {
   flex-wrap: wrap;
 }
 .projects .item {
-  box-sizing: border-box;
   width: calc((100% - 60px) / 3);
   margin-right: 30px;
   margin-bottom: 30px;
@@ -565,7 +564,6 @@ contaks--mail {
 }
 .projects .link {
   border: 1px solid var(--border-projekt);
-  box-sizing: border-box;
 }
 .projects .item:nth-child(3n) {
   margin-right: 0;
@@ -586,7 +584,7 @@ contaks--mail {
 }
 .projects-box {
   position: relative;
-  width: 370px;
+  width: 100%;
   overflow: hidden;
 }
 .projects .text {
@@ -611,8 +609,8 @@ contaks--mail {
   transform: translateY(110%);
   transition: transform 250ms var(--transition);
 }
-.projects .item:hover .text,
-.projects .item:focus .text {
+.projects > .item:hover .text,
+.projects > .item:focus .text {
   transform: translateY(0);
 }
 .projects .imet {
