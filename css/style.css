@@ -550,6 +550,8 @@ contaks--mail {
   flex-wrap: wrap;
 }
 .projects .item {
+  border: 1px solid var(--border-projekt);
+
   width: calc((100% - 60px) / 3);
   margin-right: 30px;
   margin-bottom: 30px;
@@ -562,9 +564,7 @@ contaks--mail {
   box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
     0px 1px 1px rgba(0, 0, 0, 0.12);
 }
-.projects .link {
-  border: 1px solid var(--border-projekt);
-}
+
 .projects .item:nth-child(3n) {
   margin-right: 0;
 }
@@ -609,8 +609,10 @@ contaks--mail {
   transform: translateY(110%);
   transition: transform 250ms var(--transition);
 }
-.projects > .item:hover .text,
-.projects > .item:focus .text {
+.projects .item .link:hover .text {
+  transform: translateY(0);
+}
+.projects .item .link:focus .text {
   transform: translateY(0);
 }
 .projects .imet {
