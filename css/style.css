@@ -550,8 +550,6 @@ contaks--mail {
   flex-wrap: wrap;
 }
 .projects .item {
-  border: 1px solid var(--border-projekt);
-
   width: calc((100% - 60px) / 3);
   margin-right: 30px;
   margin-bottom: 30px;
@@ -581,6 +579,9 @@ contaks--mail {
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--title-text-color);
+}
+.projects-link {
+  border: 1px solid var(--border-projekt);
 }
 .projects-box {
   position: relative;
