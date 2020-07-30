@@ -139,7 +139,6 @@ img {
 }
 .mail .link:hover svg,
 .mail .link:focus svg {
-  color: var(--accent-color);
   fill: var(--accent-color);
 }
 .mail-svg {
@@ -206,10 +205,9 @@ img {
 
   transition: background-color 250ms var(--transition);
 }
-.hero-button:hover {
+.hero-button:hover,
+.hero-button:focus {
   background: #188ce8;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
 }
 /* Заголовки секций */
 .section-title {
@@ -369,7 +367,8 @@ img {
 .social-networks__link:focus {
   background-color: var(--accent-color);
 }
-.social-networks__link:hover .social-networks__link-svg {
+.social-networks__link:hover .social-networks__link-svg,
+.social-networks__link:focus .social-networks__link-svg {
   fill: var(--bg-color);
 }
 .social-networks .imet {
@@ -435,19 +434,21 @@ img {
 }
 .footer .location {
   display: block;
+  width: max-content;
   margin-bottom: 9px;
   font-size: 14px;
   line-height: 1.71;
   color: var(--bg-color);
 }
 .footer .contaks {
+  width: max-content;
   font-family: var(--main-font);
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--footer-contaks-color);
 }
-.footer .mail {
+contaks--mail {
   display: block;
   margin-bottom: 9px;
 }
